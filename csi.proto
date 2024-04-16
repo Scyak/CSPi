@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package csi;
+
+message NexmonData {
+    repeated CSI csi = 1;
+    int32 rssi = 2;
+    uint32 fctl = 3;
+    uint64 source_mac = 4;
+    uint32 seq_num = 5;
+}
+
+message CSI {
+    int32 real = 1;
+    int32 imaginary = 2;
+}
